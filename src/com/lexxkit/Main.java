@@ -47,7 +47,35 @@ public class Main {
             }
         }
 
+        // Task 4
+        System.out.println("\nTask 4. Ping pong\n");
 
+        for (int j = 1; j < 31; j++) {
+            System.out.print(j + ":");
+            if (j % 3 == 0 && j % 5 == 0) {
+                System.out.print(" ping pong\n");
+                continue;
+            } else if (j % 3 == 0) {
+                System.out.print(" ping");
+            } else if (j % 5 == 0) {
+                System.out.print(" pong");
+            }
+            System.out.println();
+        }
 
+        // Task 5
+        System.out.println("\nTask 5. Fibonacci\n");
+
+        int[] fibonacci = new int[10];
+        fibonacci[0] = 0;
+        fibonacci[1] = 1;
+
+        for (int j = 2; j < fibonacci.length; j++) {
+            fibonacci[j] = fibonacci[j-2] + fibonacci[j-1];
+        }
+
+        for (int j = 0; j < fibonacci.length; j++) {
+            System.out.print(fibonacci[j] + " ");
+        }
     }
 }
